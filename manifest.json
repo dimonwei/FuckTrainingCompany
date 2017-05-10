@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "拦截培训机构",
+    "version": "0.0.2",
+    "description": "肯定有很多人和我一样对于求职页面刷出来的培训机构深痛恶觉,严重影响了阅读效率和体验,而且招聘网站也不作为!!!这个插件就是帮助大家删除页面上培训机构的职位信息",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        }
+    },
+    "content_scripts": [{
+        "matches": ["*://*.51job.com/*","*://*.liepin.com/*","*://*.huibo.com/*","*://*.lagou.com/*","*://*.zhaopin.com/*"],
+        "css": ["css/main.css"],
+        "js": ["js/jquery-3.2.1.min.js", "js/main.js"]
+    }],
+    "permissions": [
+        "*://*.yunvm.com/*"
+    ]
+}
