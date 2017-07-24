@@ -1,4 +1,5 @@
 var url = "https://code.aliyun.com/dimonwei/FuckTrainingCompany/raw/master/sources/FC.json";
+var host=location.host;
 //前程无忧
 function job51() {
     $.getJSON(url, function(data) {
@@ -31,13 +32,13 @@ function huibo() {
 }
 
 function check() {
-    if (location.host.indexOf("51job") != -1) {
+    if (host.indexOf("51job") != -1) {
         job51();
     }
-    if (location.host.indexOf("huibo") != -1) {
+    if (host.indexOf("huibo") != -1) {
         huibo();
     }
-    if (location.host.indexOf("zhaopin") != -1) {
+    if (host.indexOf("zhaopin") != -1) {
         zhaopin();
     }
 
