@@ -1,4 +1,4 @@
-var url = "https://code.aliyun.com/dimonwei/FuckTrainingCompany/raw/master/FC.json";
+var url = "https://code.aliyun.com/dimonwei/FuckTrainingCompany/raw/master/sources/FC.json";
 //前程无忧
 function job51() {
     $.getJSON(url, function(data) {
