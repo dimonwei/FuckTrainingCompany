@@ -1,26 +1,25 @@
 {
-    "manifest_version": 2,
-    "name": "拦截培训机构",
-    "version": "0.0.3",
-    "description": "肯定有很多人和我一样对于求职页面刷出来的培训机构深痛恶觉,严重影响了阅读效率和体验,而且招聘网站也不作为!!!这个插件就是帮助大家删除页面上培训机构的职位信息",
-    "icons": {
-        "16": "images/icon16.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png"
-    },
-    "browser_action": {
-        "default_icon": {
-            "19": "images/icon19.png",
-            "38": "images/icon38.png"
-        }
-    },
-    "content_scripts": [{
-        "matches": ["*://*.51job.com/*","*://*.liepin.com/*","*://*.huibo.com/*","*://*.lagou.com/*","*://*.zhaopin.com/*"],
-        "css": ["css/main.css"],
-        "js": ["js/jquery-3.2.1.min.js", "js/main.js"]
-    }],
-    "permissions": [
-        "*://*.yunvm.com/*",
-        "*://*.aliyun.com/*"
-    ]
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon19.png",
+         "38": "images/icon38.png"
+      }
+   },
+   "content_scripts": [ {
+      "css": [ "css/main.css" ],
+      "js": [ "js/jquery-3.2.1.min.js", "js/main.js" ],
+      "matches": [ "*://*.51job.com/*", "*://*.liepin.com/*","*://*.lagou.com/*", "*://*.zhaopin.com/*" ]
+   } ],
+   "description": "这个插件是帮助你删除求职网站页面上搜索出来的培训机构的职位信息",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn8SB8I1wGycWty+4EAkDHnzV9idZXZ+Ov35+bLip1irSTiaDmZfpkJUGOGzyomNZ3z7WeN5ACBn7mJwT8DpWp+Af6fv8201SJJmo0JsCyCP+rj8M5CBbndsmTwhzxFS+yWANdOgV5a157GZ95jiQvU2nAeAFsVtuAQ7xHAVrEmKPep9aYXKEcyINf9expQ8iVU7mfEvRBH5HEz2jdHjkoGSotv43z738s7XJkKmcH5NdZZMgAMyq/2sOH4X7QIChwXEzehPGfBbYDDPLNR34KY3BITAgHUa/kewNVGfojorNTlmpakazmvNrv6JkcYpEm6PQK7PqDfDZSAVOkbGlxwIDAQAB",
+   "manifest_version": 2,
+   "name": "培训机构删除",
+   "permissions": ["*://*.aliyun.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
 }
