@@ -1,44 +1,42 @@
 var url = "https://code.aliyun.com/dimonwei/FuckTrainingCompany/raw/master/sources/FC.json";
 var host=location.host;
+
 //前程无忧
 function job51() {
+
     $.getJSON(url, function(data) {
         for (var i = 0; i < data.length; i++) {
-            $("a:contains('" + data[i] + "')").parent().parent().fadeOut();
+            $("a:contains('" + data[i] + "')").parent().parent().remove();
         }
     });
+    //删除前程无忧,底部广告
+    $(".mainleft").remove();
+    $(".tResult_bottom_roll").remove();
+    $("#topIndex").remove();
 }
+
 //智联招聘
 function zhaopin() {
     $.getJSON(url, function(data) {
         for (var i = 0; i < data.length; i++) {
-            $("a:contains('" + data[i] + "')").parent().parent().fadeOut();
+            $("a:contains('" + data[i] + "')").parent().parent().remove();
         }
     });
-}
-//汇博人才网
-function huibo() {
-    // var a = document.getElementsByClassName("postIntro");
-    // for (var i = 0; i < a.length; i++) {
-    //     $.getJSON(url, function(data) {
-    //         for (var j = 0; j < data.length; j++) {
-    //             if (a[i].getElementsByTagName("a")[0].text == data[j]) {
-    //                 console.log(a[i].getElementsByTagName("a")[0].text + "|" + data[j]);
-    //             }
-    //         }
-    //     });
-    // }
-    console.log("正在开发");
+    //删除智联右侧广告
+    $(".newlist_right_code").remove();
+    //删除智联二维码提示
+    $(".wechat").remove();
+    //删除底部广告
+    $(".satsurvey").remove();
+    $(".interested-thing").remove();
 }
 
+//过滤网站
 function check() {
-    if (host.indexOf("51job") != -1) {
+    if (host.indexOf("search.51job.com") != -1) {
         job51();
     }
-    if (host.indexOf("huibo") != -1) {
-        huibo();
-    }
-    if (host.indexOf("zhaopin") != -1) {
+    if (host.indexOf("sou.zhaopin.com") != -1) {
         zhaopin();
     }
 
